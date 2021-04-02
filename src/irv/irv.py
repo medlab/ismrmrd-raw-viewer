@@ -5,6 +5,8 @@ from PySide6 import QtCore, QtWidgets
 from PySide6.QtWidgets import QSizePolicy, QListView
 from matplotlib.axes import Axes
 
+from mainwindow import Ui_MainWindow
+
 print(rf'''
 python is run by {sys.executable}
 ''')
@@ -21,8 +23,6 @@ from PySide6.QtCore import (Property, QAbstractTableModel, QObject,
                             QStringListModel, QUrl, Signal, Slot,
                             qInstallMessageHandler)
 from PySide6.QtWidgets import QApplication, QMainWindow, QTableView
-
-from mainwindow import Ui_MainWindow
 
 from matplotlibqml.matplotlibqml import FigureCanvasQTAgg as FigureCanvas
 
