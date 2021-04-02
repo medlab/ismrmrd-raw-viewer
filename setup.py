@@ -24,11 +24,11 @@ class UicCommand(Command):
     def run(self):
         assert os.getcwd() == self.cwd, 'Must be in package root: %s' % self.cwd
         print(rf'cwd is {os.getcwd()}')
-        os.system('pyside6-uic src/irv/mainwindow.ui > src/irv/mainwindow.py')
+        return os.system('pyside6-uic src/irv/mainwindow.ui > src/irv/mainwindow.py')
 
 setup(
     name='irv',
-    version='0.00.3',
+    version='0.00.4',
     description='ISMRMRD rawdata view and analysis tools',
     long_description=open('readme.md').read(),
     long_description_content_type='text/markdown',
