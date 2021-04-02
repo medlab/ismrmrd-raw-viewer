@@ -26,7 +26,7 @@ class UicCommand(Command):
     def run(self):
         assert os.getcwd() == self.cwd, 'Must be in package root: %s' % self.cwd
         print(rf'cwd is {os.getcwd()}')
-        return subprocess.check_call(shlex.split('pyside6-uic src/irv/mainwindow.ui -o src/irv/mainwindow.py'))
+        return subprocess.check_call(shlex.split('uic -g python src/irv/mainwindow.ui -o src/irv/mainwindow.py'))
 
 setup(
     name='irv',
