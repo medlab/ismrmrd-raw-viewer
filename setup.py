@@ -28,7 +28,7 @@ class UicCommand(Command):
 
 setup(
     name='irv',
-    version='0.00.1',
+    version='0.00.3',
     description='ISMRMRD rawdata view and analysis tools',
     long_description=open('readme.md').read(),
     long_description_content_type='text/markdown',
