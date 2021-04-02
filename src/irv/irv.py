@@ -5,7 +5,7 @@ from PySide6 import QtCore, QtWidgets
 from PySide6.QtWidgets import QSizePolicy, QListView
 from matplotlib.axes import Axes
 
-from mainwindow import Ui_MainWindow
+from .mainwindow import Ui_MainWindow
 
 print(rf'''
 python is run by {sys.executable}
