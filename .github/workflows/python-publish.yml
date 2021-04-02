@@ -28,6 +28,12 @@ jobs:
         pip install
         build
         --user
+    - name: Install PySide6
+      run: >-
+        python -m
+        pip install
+        PySide6
+        --user
     - name: Run uic
       run: >-
         python setup.py uic
