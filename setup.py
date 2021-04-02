@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+import shlex
 
 from setuptools import setup
 
@@ -10,6 +11,7 @@ depend_packages=[
 
 from distutils.core import setup, Command
 import os, sys
+import subprocess
 
 class UicCommand(Command):
     description = "custom uic gen command that gen the python code which keep sync with .ui file"
@@ -24,7 +26,7 @@ class UicCommand(Command):
     def run(self):
         assert os.getcwd() == self.cwd, 'Must be in package root: %s' % self.cwd
         print(rf'cwd is {os.getcwd()}')
-        return os.system('pyside6-uic src/irv/mainwindow.ui > src/irv/mainwindow.py')
+        return subprocess.check_call(shlex.split('pyside6-uic src/irv/mainwindow.ui -o src/irv/mainwindow.py'))
 
 setup(
     name='irv',
